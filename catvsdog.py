@@ -10,6 +10,7 @@ Puzzle : https://www.spotify.com/us/jobs/tech/catvsdog/
 import sys
 
 input = sys.stdin
+# input = open('test', 'r')
 
 cases = int(input.readline())
 results = ''
@@ -19,11 +20,10 @@ while i < cases:
     c, d, v = [int(x) for x in input.readline().split()]
     votes = dict()  # Will store how many upvotes a pet got
     # Create all dictionary keys
-    for j in range(0, c+d):
-        if j < c:
-            votes['C' + str(j+1)] = 0
-        else:
-            votes['D' + str(j-c+1)] = 0
+    for j in range(1, c+1):
+        votes['C' + str(j)] = 0
+    for j in range(1, d+1):
+        votes['D' + str(j)] = 0
     scores = votes.copy()  # Will store how much a pet is liked (up - down)
 
     # For each vote, update the dictionaries
@@ -34,7 +34,7 @@ while i < cases:
         scores[v2] -= 1
         k += 1
 
-    # How many votes got the pet with the best score?
+    # How many votes did the pet with the best score get?
     max_score_pet = max(scores, key=scores.get)
     max_vote = votes[max_score_pet]
 
