@@ -16,19 +16,22 @@ Ingenious as they are, the producers have decided to use an advancement procedur
 Input
 -----
 On the first line one positive number: the number of testcases, at most 100. After that per testcase:
-    One line with three integers c, d, v (1 ≤ c, d ≤ 100 and 0 ≤ v ≤ 500): the number of cats, dogs, and voters.
-    v lines with two pet identifiers each. The first is the pet that this voter wants to keep, the second is the pet that this voter wants to throw out. A pet identifier starts with one of the characters ‘C’ or ‘D’, indicating whether the pet is a cat or dog, respectively. The remaining part of the identifier is an integer giving the number of the pet (between 1 and c for cats, and between 1 and d for dogs). So for instance, “D42” indicates dog number 42.
+
+One line with three integers c, d, v (1 ≤ c, d ≤ 100 and 0 ≤ v ≤ 500): the number of cats, dogs, and voters.
+
+v lines with two pet identifiers each. The first is the pet that this voter wants to keep, the second is the pet that this voter wants to throw out. A pet identifier starts with one of the characters ‘C’ or ‘D’, indicating whether the pet is a cat or dog, respectively. The remaining part of the identifier is an integer giving the number of the pet (between 1 and c for cats, and between 1 and d for dogs). So for instance, “D42” indicates dog number 42.
 
 Output
 ------
 Per testcase:
+
 One line with the maximum possible number of satisfied voters for the show.
 
 Sample
 ------
   Input :
   
-    2
+   	2
 	1 1 2
 	C1 D1
 	D1 C1
@@ -39,8 +42,9 @@ Sample
 	D2 C1 
   
   Output :
+  
     1
-	3 
+	3
 
 
 Explanations (Spoiler !)
